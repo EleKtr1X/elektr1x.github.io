@@ -8,6 +8,7 @@
 }
   
 .box {
+<<<<<<< HEAD
     /* border: black solid 6px; */
     width: 90%;
     border-radius: 20px;
@@ -91,3 +92,15 @@ body {
 /* .projects > .project-container { */
 
 /* } */
+=======
+    border: black solid 6px;
+    width: 75%;
+    border-radius: 20px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+body {
+    background: linear-gradient(to right, #000080, #800080)
+}
+>>>>>>> 6c2f48d... Create style.css, update index.html
