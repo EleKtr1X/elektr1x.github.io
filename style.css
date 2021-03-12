@@ -8,13 +8,14 @@
 }
   
 .box {
-    border: black solid 6px;
+    /* border: black solid 6px; */
     width: 75%;
     border-radius: 20px;
     margin: 0 auto;
     background-color: white;
-    margin-bottom: 6px;
-    padding-bottom: auto;
+    margin-bottom: 15px;
+    padding: 6px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .8)
 }
 
 body {
