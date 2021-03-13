@@ -179,7 +179,9 @@ body {
 }
 
 #socials {
-    font-size: 40px
+    font-size: 40px;
+    margin-top: -0.5%;
+    margin-bottom: -0.2%
 }
 
 .project-container .project-image, .project-container h2 {
