@@ -8,11 +8,8 @@
 }
   
 .box {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /* border: black solid 6px; */
     width: 90%;
-<<<<<<< HEAD
     border-radius: 20px;
     margin: 0 auto;
     background-color: white;
@@ -74,7 +71,6 @@ body {
     color: white;
     padding-left: 7px;
     padding-right: 7px;
-<<<<<<< HEAD
     /* font-size: 100%; */
 }
 
@@ -95,107 +91,3 @@ body {
 /* .projects > .project-container { */
 
 /* } */
-=======
-    border: black solid 6px;
-=======
-    /* border: black solid 6px; */
->>>>>>> f7ba20e... Added box shadow and removed outline
-    width: 75%;
-=======
->>>>>>> 2305c5b... Update project container, add GDExt and ToT BoT
-    border-radius: 20px;
-    margin: 0 auto;
-    background-color: white;
-    margin-bottom: 15px;
-    padding: 6px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .8)
-}
-
-body {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    background: linear-gradient(to right, #000080, #800080)
-}
->>>>>>> 6c2f48d... Create style.css, update index.html
-=======
-    background: linear-gradient(to right, #000080, #800080);
-=======
-    background: linear-gradient(to right, #000080, #800080, #000080);
->>>>>>> 2305c5b... Update project container, add GDExt and ToT BoT
-    background-size: 400% 400%;
-
-    -webkit-animation: gradient 60s ease infinite;
-    -moz-animation: gradient 60s ease infinite;
-    animation: gradient 60s ease infinite;
-}
-
-@-webkit-keyframes gradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes gradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes gradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-<<<<<<< HEAD
->>>>>>> aeb943b... Added moving gradient background
-=======
-
-.project-image {
-    /* object-fit: cover; */
-    /* width: 200px; */
-    /* height: 200px; */
-    border-radius: 50%;
-    cursor: pointer;
-    height: 100px;
-}
-
-.project-container {
-    /* border: black solid 6px; */
-    width: 300px;
-    padding-top: 24px;
-    display: inline-block;
-    background-color: black;
-    /* display: flex; */
-    /* flex-wrap: nowrap; */
-    /* flex: 30%; */
-    margin-right: 5px;
-    margin-left: 5px;
-    /* position: relative; */
-    border-radius: 25px;
-}
-
-.project-container h2, .project-container p {
-    color: white;
-    padding-left: 5px;
-    padding-right: 5px;
-=======
->>>>>>> a6d8ba1... Small changes
-    /* font-size: 100%; */
-}
-
-#socials {
-    font-size: 40px;
-    margin-top: -0.5%;
-    margin-bottom: -0.2%
-}
-
-.project-container .project-image, .project-container h2 {
-    text-decoration: none;
-}
-
-.project-container h2 {
-    margin-top: -2%;
-}
-
-/* .projects > .project-container { */
-
-/* } */
->>>>>>> b49d6df... Add projects section, move imaages to folder
