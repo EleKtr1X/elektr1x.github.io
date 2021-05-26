@@ -88,27 +88,6 @@ body {
     margin-top: -2%;
 }
 
-#spin {
-    background-color:#ffffffcc;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* .projects > .project-container { */
 
-#spinner {
-    height: 6rem;
-    width: 6rem;
-    animation: spinner 1s linear infinite;
-}
-
-@keyframes spinner {
-    to {
-        transform: rotate(360deg);
-    }
-}
+/* }
