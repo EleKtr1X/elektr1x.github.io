@@ -36,6 +36,10 @@ body {
     align-items: center;
 }
 
+h3 {
+    font-size: 1.333vw;
+}
+
 .box {
     /* border: black solid 6px; */
     width: 90%;
@@ -54,7 +58,7 @@ body {
 
 .project-container {
     /* border: black solid 6px; */
-    width: 23rem;
+    width: clamp(20rem, 23vw, 26rem);
     padding-top: 24px;
     display: inline-block;
     background-color: black;
