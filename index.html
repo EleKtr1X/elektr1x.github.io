@@ -22,39 +22,50 @@ Made by EleKtr1X :)
 <html prefix="og: https://ogp.me/ns#">
   <head>
     <title>EleKtr1X's Terrible Website</title>
-    <link href='./style.css' rel='stylesheet'>
-    <link rel='shortcut icon' href="./images/favicon.ico?">
-    <meta property='og:title' content="EleKtr1X's Website"/>
-    <meta property='og:description' content="Just a random website"/>
-    <meta property='og:site_name' content="EleKtr1X's Website"/>
-    <meta property='og:image' content="https://elektr1x.github.io/images/some_corrupted_file.png"/>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/favicon.ico?">
+
+    <!-- opengraph stuff -->
+    <meta property="og:title" content="EleKtr1X's Website"/>
+    <meta property="og:description" content="Just a random website"/>
+    <meta property="og:site_name" content="EleKtr1X's Website"/>
+    <meta property="og:image" content="https://elektr1x.github.io/images/profile.png"/>
     <meta name="theme-color" content="#0099ff"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://kit.fontawesome.com/dd456b3c10.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class='box'>
+    <div class="box">
       <h1>EleKtr1X's website</h1>
       <h3>Hey. I'm EleKtr1X. And this is my website.</h3>
-      <p>
-        Have fun, I guess.<br/>
-        <span style="font-size:12px;">P.S. This website is fully open-source! Check it out <a href="https://github.com/EleKtr1X/elektr1x.github.io">here</a>.</span>
-      </p>
+      <p>Have fun, I guess.</p>
+      <p style="font-size: 13px">P.S. This website is fully open-source! Check it out <a href="https://github.com/EleKtr1X/elektr1x.github.io">here</a>.</p>
     </div>
-    <div class='box'>
-      <h1>Connect with me</h1>
-        <p id='socials'>
-          <a href="https://github.com/EleKtr1X"><i class="fab fa-github fa-fw" style='color:#333'></i></a>
-          <a href="https://discord.com/users/398967501662322701"><i class="fab  fa-discord fa-fw" style='color:#7289da'></i></a>
-          <a href="https://twitter.com/EleKtr1X"><i class="fab fa-twitter fa-fw" style='color:#1da1f2'></i></a>
-          <a href="https://reddit.com/u/EleKtr1X"><i class="fab fa-reddit fa-fw" style='color:#ff4500'></i></a> <!-- keanu chungus wholesome 100 reddit moment -->
+    <div class="box">
+      <h1>Socials</h1>
+        <p class="icons">
+          <a href="https://github.com/EleKtr1X"><i class="fab fa-github fa-fw" style="color:#333"></i></a>
+          <a href="https://discord.com/users/398967501662322701"><i class="fab  fa-discord fa-fw" style="color:#7289da"></i></a>
+          <a href="https://twitter.com/EleKtr1X"><i class="fab fa-twitter fa-fw" style="color:#1da1f2"></i></a>
         </p>
     </div>
     <div class="box">
+      <h1>Languages and tools I use sometimes</h1>
+      <p class="icons">
+        <a href="https://nodejs.org/"><img src="./svgs/nodedotjs.svg"/></a>
+        <a href="https://en.wikipedia.org/wiki/JavaScript/"><img src="./svgs/javascript.svg"/></a>
+        <a href="https://typescriptlang.org/"><img src="./svgs/typescript.svg"/></a>
+        <a href="https://ruby-lang.org/en/"><img src="./svgs/ruby.svg"/></a>
+        <a href="https://rust-lang.org/"><img src="./svgs/rust.svg"/></a>
+      </p>
+    </div>
+    <div class="box">
       <h1>My projects</h1>
-      <div class='projects'>
+      <p>The things I've either made or worked on.</p> <!-- ucrash i added this line, please don't sue me -->
+      <div class="projects">
         <div class="project-container">
-          <img class='project-image' src='./images/lightning-bot.jpg' alt='Lightning Bot'>
+          <img class="project-image" src="./images/lightning-bot.jpg" alt="Lightning Bot">
           <h2>Lightning Bot</h2>
           <p>
             A multipurpose bot I made for no reason with fun and moderation commands.<br />
@@ -64,7 +75,7 @@ Made by EleKtr1X :)
           </p>
         </div>
         <div class="project-container">
-          <img class='project-image' src='./images/gdext.jpg' alt='GDExt'>
+          <img class="project-image" src="./images/gdext.jpg" alt="GDExt">
           <h2>GDExt</h2>
           <p>
             An external Geometry Dash viewer that I have helped in the production of. Created by Ucrash.
@@ -75,11 +86,21 @@ Made by EleKtr1X :)
           </p>
         </div>
         <div class="project-container">
-          <img class='project-image' src='./images/calcBot.png' alt='CalcBot'>
+          <img class="project-image" src="./images/calc-bot.png" alt="CalcBot">
           <h2>CalcBot</h2>
           <p>
             A calculator with multiple functions, as a Discord bot! (also uses slash commands!)<br />
             <a href="https://discord.com/oauth2/authorize?client_id=716172732034973789&permissions=3072&scope=bot%20applications.commands">Invite Link</a>
+          </p>
+        </div>
+        <div class="project-container">
+          <img class="project-image" src="./images/bill-splitter.png" alt="Lightning Bot">
+          <h2>Eating Out Bill Splitter</h2>
+          <p>
+            Eating out and having trouble splitting the bill? Here's a small web app made in Svelte to help with that.<br />
+            <a href="https://elektr1x.github.io/bill-splitter">Link</a>
+            &bullet;
+            <a href="https://github.com/EleKtr1X/bill-splitter">GitHub Repository</a>
           </p>
         </div>
       </div>
