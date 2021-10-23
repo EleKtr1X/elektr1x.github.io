@@ -1,5 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
+.project img {
+    max-width: 5rem;
+    max-height: 5rem;
+}
+
+.parent {
+    padding: 2rem;
+}
+
+.socials-container {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    margin: 0 5rem;
+}
+
+.langs-container {
+    padding-top: 1rem;
+}
+
+.box {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 3rem .5rem;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+@media screen and (min-width:800px) {
+    .parent {
+        padding: 2rem 10rem;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .parent {
+        padding: 2rem 20rem;
+    }
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 1300px) {
+    .projects {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.project {
+    background-color: rgba(255, 255, 255, .7);
+    padding: 2rem;
+    border-radius: 15px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    display: block;
+    text-decoration: none;
+}
+
+.project h3 {
+    margin-bottom: .125rem;
+}
+
+.project p {
+    margin: 0;
+    margin-top: .125rem;
+}
+
+.project .img {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+}
+
+.project:hover {
+    transform: translateY(-.125rem);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+}
+
+.pfp {
+    width: 8rem;
+    height: 8rem;
+    background-color: rgba(0, 0, 0, .1);
+    padding: 1rem;
+    border-radius: 9999px;
+}
+
+.big-text {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
 @-webkit-keyframes gradient {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -19,7 +113,6 @@
 * {
     font-family: "Rubik", sans-serif;
     text-align: center;
-    margin-bottom: 1rem;
     color: black;
 }
 
@@ -30,56 +123,15 @@ body {
     -webkit-animation: gradient 60s ease infinite;
     -moz-animation: gradient 60s ease infinite;
     animation: gradient 60s ease infinite;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 h3 {
     font-size: 1.333rem;
+    margin-bottom: 1rem;
 }
 
-.box {
-    width: 83%;
-    border-radius: 20px;
-    background-color: white;
-    padding: 10px 20px 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .4);
-    margin-top: 15px;
-}
-
-.project-image {
-    width: clamp(10%, 25%, 30%);
-    aspect-ratio: 1/1;
-    /* border-radius: 50%; */
-    cursor: pointer;
-}
-
-.project-container {
-    width: 25vw;
-    padding-top: 24px;
-    display: inline-block;
-    background-color: black;
-    margin-right: .5rem;
-    margin-left: .5rem;
-    border-radius: 25px;
-}
-
-@media screen and (max-width: 800px) {
-    .project-container {
-        width: 90%;
-    }
-}
-.project-container h2, .project-container p {
-    color: white;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    /* font-size: 100%; */
-}
-
-.project-container a {
-    color: white;
+.mb {
+    margin-bottom: 2rem;
 }
 
 .icons {
@@ -88,15 +140,11 @@ h3 {
     margin-bottom: -0.2%
 }
 
-.project-container h2 {
-    margin-top: -2%;
-}
-
 .icons img {
     width: 30px;
     height: 30px;
 }
 
-/* .projects > .project-container { */
-
-/* }
+.icons a:hover {
+    filter: brightness(90%);
+}
