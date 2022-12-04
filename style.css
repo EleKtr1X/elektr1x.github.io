@@ -19,11 +19,15 @@
     padding-top: 1rem;
 }
 
+.box, .project {
+    box-shadow: rgb(0, 0, 0) 10px 10px 0px;
+    background-color: white;
+    border-radius: 20px;
+    border: 5px solid black;
+}
+
 .box {
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 3rem .5rem;
-    background-color: rgba(255, 255, 255, .8);
 }
 
 @media screen and (min-width:800px) {
@@ -52,9 +56,7 @@
 }
 
 .project {
-    background-color: rgba(255, 255, 255, .7);
     padding: 2rem;
-    border-radius: 15px;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
