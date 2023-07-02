@@ -1,151 +1,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 .project img {
-    max-width: 5rem;
-    max-height: 5rem;
+  max-width: 5rem;
+  max-height: 5rem;
 }
 
 .parent {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .socials-container {
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
-    margin: 0 5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+  margin: 0 5rem;
 }
 
 .langs-container {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 
 .box, .project {
-    box-shadow: rgb(0, 0, 0) 10px 10px 0px;
-    background-color: white;
-    border-radius: 20px;
-    border: 5px solid black;
+  box-shadow: rgb(0, 0, 0) 10px 10px 0px;
+  background-color: white;
+  border-radius: 20px;
+  border: 5px solid black;
 }
 
 .box {
-    padding: 3rem 2rem;
+  padding: 3rem 2rem;
 }
 
 @media screen and (min-width:800px) {
-    .parent {
-        padding: 2rem 10rem;
-    }
+  .parent {
+      padding: 2rem 10rem;
+  }
 }
 
 @media screen and (min-width: 1080px) {
-    .parent {
-        padding: 2rem 20rem;
-    }
+  .parent {
+      padding: 2rem 20rem;
+  }
 }
 
 .projects {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1rem;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 1300px) {
-    .projects {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+  .projects {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .project {
-    padding: 2rem;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-    display: block;
-    text-decoration: none;
+  padding: 2rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  display: block;
+  text-decoration: none;
 }
 
 .project h3 {
-    margin-bottom: .125rem;
+  margin-bottom: .125rem;
 }
 
 .project p {
-    margin: 0;
-    margin-top: .125rem;
+  margin: 0;
+  margin-top: .125rem;
 }
 
 .project .img {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 50%;
 }
 
 .project:hover {
-    filter: brightness(0.85)
+  filter: brightness(0.85)
 }
 
 .pfp {
-    width: 8rem;
-    height: 8rem;
-    background-color: rgba(0, 0, 0, .1);
-    padding: 1rem;
-    border-radius: 9999px;
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(0, 0, 0, .1);
+  padding: 1rem;
+  border-radius: 9999px;
 }
 
 .big-text {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 @-webkit-keyframes gradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 @-moz-keyframes gradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 @keyframes gradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 * {
-    font-family: "Rubik", sans-serif;
-    text-align: center;
-    color: black;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  color: black;
 }
 
 body {
-    background: linear-gradient(to right, #000080, #800080, #000080);
-    background-size: 400% 400%;
+  background: linear-gradient(to right, #000080, #800080, #000080);
+  background-size: 400% 400%;
 
-    -webkit-animation: gradient 60s ease infinite;
-    -moz-animation: gradient 60s ease infinite;
-    animation: gradient 60s ease infinite;
+  -webkit-animation: gradient 60s ease infinite;
+  -moz-animation: gradient 60s ease infinite;
+  animation: gradient 60s ease infinite;
 }
 
 h3 {
-    font-size: 1.333rem;
-    margin-bottom: 1rem;
+  font-size: 1.333rem;
+  margin-bottom: 1rem;
 }
 
 .mb {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .icons {
-    font-size: 30px;
-    margin-top: -0.5%;
-    margin-bottom: -0.2%
+  font-size: 30px;
+  margin-top: -0.5%;
+  margin-bottom: -0.2%
 }
 
 .icons img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .icons a:hover {
-    filter: brightness(90%);
+  filter: brightness(90%);
 }
