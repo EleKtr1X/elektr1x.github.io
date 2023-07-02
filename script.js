@@ -1,4 +1,4 @@
-let h3, p, img, i;
+let h3, p, img, ic;
 const konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 
 let keys = [];
@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
   h3 = Array.from(document.getElementsByTagName('h3')).map(x => x.outerHTML);
   p = Array.from(document.getElementsByTagName('p')).map(x => x.outerHTML);
   img = Array.from(document.getElementsByTagName('img')).map(x => x.outerHTML);
-  i = Array.from(document.getElementsByTagName('i')).map(x => x.outerHTML);
+  ic = Array.from(document.getElementsByTagName('i')).map(x => x.outerHTML);
 });
 
 window.addEventListener('keydown', e => {
@@ -53,7 +53,7 @@ window.addEventListener('keydown', e => {
       }
       
       for (const i in iDOM) {
-        iDOM[i].outerHTML = i[i];
+        iDOM[i].outerHTML = ic[i];
       }
 
       for (const i in imgDOM) {
