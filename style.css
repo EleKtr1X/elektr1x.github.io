@@ -79,12 +79,7 @@
 }
 
 .project:hover {
-    /* transform: translateY(-.125rem); */
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px; */
-    /* box-shadow: #555 10px 10px 0px; */
-    /* border: 5px solid #555; */
     filter: brightness(0.85)
-
 }
 
 .pfp {
