@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 
 .project img {
   max-width: 5rem;
@@ -74,7 +74,6 @@
 }
 
 .project .img {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 50%;
 }
 
@@ -112,7 +111,7 @@
 }
 
 * {
-  font-family: "Rubik", sans-serif;
+  font-family: "Atkinson Hyperlegible", sans-serif;
   text-align: center;
   color: black;
 }
