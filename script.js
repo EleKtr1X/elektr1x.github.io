@@ -55,3 +55,24 @@ window.addEventListener('keydown', e => {
     }
   }
 }, true);
+
+function sizeCheck() {
+  console.log('called')
+  if (window.innerWidth <= 800) {
+    const projs = document.getElementsByClassName('projects');
+    for (const i of projs) {
+      i.classList.remove('projects');
+      i.classList.add('projects-small', 'xp');
+    }
+  } else {
+    const projs = document.getElementsByClassName('xp');
+    for (const i of projs) {
+      i.classList.remove('xp');
+      i.classList.remove('projects-small');
+      i.classList.add('projects');
+    }
+  }
+}
+
+window.addEventListener('DOMContentLoaded', _ => sizeCheck())
+window.addEventListener('resize', _ => sizeCheck());
