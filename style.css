@@ -28,6 +28,10 @@
   .projects-small.xp {
     padding-bottom: 1.5rem;
   }
+
+  .button button {
+    font-size: 1rem;
+  }
 }
 
 .projects-small .buttons {
@@ -52,23 +56,14 @@
     margin-top: 0;
   }
 
-  .projects .project p {
-    font-size: 1.1rem;
+  .projects .project p, .bio, .button button {
+    font-size: 1.2rem;
   }
 
   .buttons-small {
     display: flex;
     flex-direction: column;
     gap: 0.667rem;
-  }
-
-  .button {
-    margin-right: 0.4rem;
-    text-decoration: none;
-  }
-
-  .button button:hover {
-    filter: brightness(0.8);
   }
 
   .projects .project * {
@@ -195,17 +190,12 @@ h3 {
   filter: brightness(90%);
 }
 
-.bio {
-  font-size: 1.2rem;
-}
-
 .bio p {
   margin-top: 1rem;
   margin-bottom: 0;
 }
 
 .button button {
-  font-size: 1.1rem;
   box-shadow: black 5px 5px 0px;
   background-color: white;
   border-radius: 10px;
@@ -216,6 +206,15 @@ h3 {
 }
 
 .button button i img {
-  height: 1.1rem;
+  height: 1.2rem;
   margin: 0;
+}
+
+.button {
+  margin-right: 0.4rem;
+  text-decoration: none;
+}
+
+.button button:hover {
+  filter: brightness(0.8);
 }
