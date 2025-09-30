@@ -19,25 +19,17 @@ window.addEventListener('keydown', e => {
     const pDOM = document.getElementsByTagName('p');
     const imgDOM = document.getElementsByTagName('img');
     const iDOM = document.getElementsByTagName('i');
+    const buttonDOM = document.getElementsByTagName('button');
 
     if (eggActive == false) {
       document.body.style.background = getComputedStyle(document.body).background.replace(/linear-gradient\(.+\)/, 'linear-gradient(to right, rgb(34, 215, 29), rgb(253, 46, 246), rgb(155, 83, 0))');
       document.getElementsByClassName('big-text')[0].textContent = 'Unpleasant Gradient';
   
-      h3DOM[0].textContent = 'Front doors it\'s showed up at';
-  
-      for (let i = 1; i < h3DOM.length; i++) {
-        h3DOM[i].textContent = 'Unpleasant Gradient';
-        pDOM[i - 1].textContent = 'This unpleasant gradient shows up in your website';
-      }
-
-      for (const i of imgDOM) {
-        i.src = 'images/upg.png';
-      }
-  
-      for (const i of iDOM) {
-        i.outerHTML = '<i><img src="images/upg.png"/></i>'
-      }
+      for (const i of h3DOM) { i.textContent = 'Unpleasant Gradient'; }
+      for (const i of pDOM) { i.textContent = 'This unpleasant gradient shows up in your website'; }
+      for (const i of buttonDOM) { i.textContent.replace(/<i .+>?(.+)<\/i>?/, 'It\'s here'); }
+      for (const i of imgDOM) { i.src = 'images/upg.png'; }
+      for (const i of iDOM) { i.outerHTML = '<i><img src="images/upg.png"/></i>' }
 
       eggActive = true;
     } else {
