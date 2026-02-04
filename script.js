@@ -134,10 +134,12 @@ window.addEventListener('DOMContentLoaded', async _ => {
     </div>
     ` : `
     <div class="button">
+    <button>
     <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
     <span id="status-spotify">
       Nothing right now
     </span>
+    </button>
     </div>`;
   }
 });
