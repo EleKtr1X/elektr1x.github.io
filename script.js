@@ -126,7 +126,7 @@ window.addEventListener('DOMContentLoaded', async _ => {
     <button>
     <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
       <span id="status-spotify">
-        ${spotify.details} - ${spotify.state.replace(';', ',')}
+        "${spotify.details}" by ${spotify.state.replaceAll(/(\w); /g, '$1, ')}
       </span>
       <i class="ti ti-external-link"></i>
       </button>
