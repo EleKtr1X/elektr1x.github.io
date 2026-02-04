@@ -122,16 +122,18 @@ window.addEventListener('DOMContentLoaded', async _ => {
     spotifyStatus.parentElement.outerHTML = spotify ?
     `
     <a target="_blank" href="https://open.spotify.com/track/${spotify.sync_id}" style="text-decoration: none">
-    <div class="status">
+    <div class="button">
+    <button>
     <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
       <span id="status-spotify">
         ${spotify.details} - ${spotify.state.replace(';', ',')}
       </span>
       <i class="ti ti-external-link"></i>
+      </button>
     </div>
     </a>
     ` : `
-    <div class="status">
+    <div class="button">
     <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
     <span id="status-spotify">
       Nothing right now
