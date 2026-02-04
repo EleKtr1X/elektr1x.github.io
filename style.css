@@ -258,10 +258,6 @@ h3 {
   gap: 5px;
 }
 
-.status a {
-  text-decoration: none;
-}
-
 .statuses {
   display: flex;
   flex-direction: column;
