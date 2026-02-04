@@ -119,10 +119,10 @@ window.addEventListener('DOMContentLoaded', async _ => {
     vscodeStatus.innerHTML = vscode ? vscode.details : 'Nothing right now';
 
     const spotify = data.activities.filter(x => x.name == 'Spotify')[0];
-    spotifyStatus.parentElement.outerHTML = spotify ?
+    spotifyStatus.parentElement.parentElement.outerHTML = spotify ?
     `
-    <a target="_blank" href="https://open.spotify.com/track/${spotify.sync_id}" style="text-decoration: none">
     <div class="button">
+    <a target="_blank" href="https://open.spotify.com/track/${spotify.sync_id}" style="text-decoration: none">
     <button>
     <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
       <span id="status-spotify">
@@ -130,8 +130,8 @@ window.addEventListener('DOMContentLoaded', async _ => {
       </span>
       <i class="ti ti-external-link"></i>
       </button>
+      </a>
     </div>
-    </a>
     ` : `
     <div class="button">
     <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
