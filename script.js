@@ -74,5 +74,57 @@ function sizeCheck() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', _ => sizeCheck())
+function menu(icon, items, menuOpen) {
+  console.log('start');
+  if (menuOpen) {
+    icon.style.position = 'relative';
+    icon.style.top = '';
+    icon.style.right = '';
+    icon.className = 'ti ti-menu-2';
+    items.style.display = 'none';
+  } else {
+    icon.style.position = 'absolute';
+    icon.style.top = '10px';
+    icon.style.right = '10px';
+    icon.className = 'ti ti-x';
+    items.style.display = 'flex';
+  }
+  console.log('end');
+  return !menuOpen;
+}
+
+window.addEventListener('DOMContentLoaded', async _ => {
+  sizeCheck();
+
+  let button = document.getElementById('menu-icon');
+  let items = document.getElementById('menu-items');
+  let icon = button.childNodes[1];
+  let menuOpen = false;
+
+  button.addEventListener('click', () => {
+    menuOpen = menu(icon, items, menuOpen);
+  });
+
+  button.addEventListener('touchcancel', () => {
+    menuOpen = menu(icon, items, menuOpen);
+  });
+
+  let vscodeStatus = document.getElementById('status-vscode');
+  let spotifyStatus = document.getElementById('status-spotify');
+  if (document.getElementsByClassName('statuses')[0]) {
+    const res = await fetch('https://api.statusbadges.me/presence/398967501662322701');
+    const data = await res.json();
+
+    const vscode = data.activities.filter(x => x.name == 'Visual Studio Code')[0];
+    vscodeStatus.innerHTML = vscode ? vscode.details : 'Nothing right now';
+
+    const spotify = data.activities.filter(x => x.name == 'Spotify')[0];
+    spotifyStatus.outerHTML = spotify ?
+    `<a target="_blank" href="https://open.spotify.com/track/${spotify.sync_id}">
+      ${spotify.details} - ${spotify.state}
+      <i class="ti ti-external-link"></i>
+    </a>` : 'Nothing right now';
+  }
+});
+
 window.addEventListener('resize', _ => sizeCheck());
