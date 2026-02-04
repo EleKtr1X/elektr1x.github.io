@@ -58,7 +58,7 @@ window.addEventListener('keydown', e => {
 
 function sizeCheck() {
   console.log('called')
-  if (window.innerWidth <= 800) {
+  if (window.innerWidth <= 900) {
     const projs = document.getElementsByClassName('projects');
     for (const i of projs) {
       i.classList.remove('projects');

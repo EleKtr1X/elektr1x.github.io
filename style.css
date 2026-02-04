@@ -16,7 +16,7 @@
   padding: 3rem 5rem;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
   .parent {
     padding: 2rem 1rem;
   }
@@ -37,6 +37,12 @@
 .projects-small .buttons {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.projects .buttons {
+  display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
