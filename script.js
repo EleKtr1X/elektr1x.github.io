@@ -82,6 +82,7 @@ function menu(icon, items, menuOpen) {
     icon.style.right = '';
     icon.className = 'ti ti-menu-2';
     items.style.display = 'none';
+    icon
   } else {
     icon.style.position = 'absolute';
     icon.style.top = '10px';
@@ -100,6 +101,8 @@ window.addEventListener('DOMContentLoaded', async _ => {
   let items = document.getElementById('menu-items');
   let icon = button.childNodes[1];
   let menuOpen = false;
+
+  items.style.
 
   button.addEventListener('click', () => {
     menuOpen = menu(icon, items, menuOpen);
