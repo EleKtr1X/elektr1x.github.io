@@ -102,8 +102,6 @@ window.addEventListener('DOMContentLoaded', async _ => {
   let icon = button.childNodes[1];
   let menuOpen = false;
 
-  items.style.
-
   button.addEventListener('click', () => {
     menuOpen = menu(icon, items, menuOpen);
   });
