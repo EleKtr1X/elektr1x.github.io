@@ -1,11 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 
-.projects-small .project img {
-  max-width: 5rem;
-  max-height: 5rem;
+* {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  text-align: center;
+  color: black;
 }
 
-.box, .project {
+body {
+  background: linear-gradient(to right, #000080, #800080, #000080);
+  background-size: 400% 400%;
+  animation: gradient 60s ease infinite;
+}
+
+@keyframes gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.box,
+.project {
   box-shadow: black 10px 10px 0px;
   background-color: white;
   border-radius: 20px;
@@ -16,22 +30,64 @@
   padding: 3rem 5rem;
 }
 
-@media screen and (max-width:900px) {
+.parent {
+  padding: 2rem 1rem;
+}
+
+@media screen and (min-width: 900px) {
   .parent {
-    padding: 2rem 1rem;
+    padding: 2rem 10rem;
   }
-  
+}
+
+@media screen and (min-width: 1200px) {
+  .parent {
+    padding: 2rem 17.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
   .box {
     padding: 2rem 2.5rem;
-  }
-
-  .projects-small.xp {
-    padding-bottom: 1.5rem;
   }
 
   .button button {
     font-size: 1rem;
   }
+}
+
+.projects-small {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  .projects-small {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .projects {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0;
+    padding-bottom: 0;
+  }
+}
+
+.projects-small .project img {
+  max-width: 5rem;
+  max-height: 5rem;
+}
+
+.projects-small .project h3 {
+  margin-top: 1rem;
+  margin-bottom: .125rem;
+}
+
+.projects-small .project p {
+  margin-top: .5rem;
 }
 
 .projects-small .buttons {
@@ -41,18 +97,13 @@
   gap: 0.1rem;
 }
 
-.projects .buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.2rem;
+.project {
+  padding: 2rem;
+  display: block;
+  box-sizing: border-box;
 }
 
-@media screen and (min-width:800px) {
-  .parent {
-    padding: 2rem 10rem;
-  }
-
+@media screen and (min-width: 900px) {
   .projects .project .project-img {
     float: left;
     max-width: 10rem;
@@ -65,8 +116,30 @@
     margin-top: 0;
   }
 
-  .projects .project p, .bio, .button button {
+  .projects .project p,
+  .bio,
+  .button button {
     font-size: 1.2rem;
+  }
+
+  .projects .project * {
+    text-align: left;
+  }
+
+  .projects .project {
+    padding: 3rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+
+  .projects .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
   }
 
   .buttons-small {
@@ -74,106 +147,16 @@
     flex-direction: column;
     gap: 1rem;
   }
-
-  .projects .project * {
-    text-align: left;
-  }
 }
 
-@media screen and (min-width: 1080px) {
-  .parent {
-    padding: 2rem 17.5rem;
-  }
-}
-
-.projects-small {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1.5rem;
-  width: 100%;
-}
-
-@media screen and (min-width: 1300px) {
-  .projects-small {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.project {
-  padding: 2rem;
-  display: block;
-  box-sizing: border-box;
-}
-
-.projects .project {
-  padding: 3rem 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  margin-bottom: 1.5rem;
-}
-
-.projects-small .project h3 {
-  margin-top: 1rem;
-  margin-bottom: .125rem;
-}
-
-.projects-small .project p {
-  margin-top: .5rem;
-}
-
-.project .img {
-  border-radius: 50%;
-}
-
-.pfp {
-  width: 8rem;
-  height: 8rem;
-  background-color: rgba(0, 0, 0, .1);
-  padding: 1rem;
-  border-radius: 50%;
+h3 {
+  font-size: 1.333rem;
+  margin-bottom: 1rem;
 }
 
 .big-text {
   font-size: 3rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-@-webkit-keyframes gradient {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@-moz-keyframes gradient {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@keyframes gradient {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-
-* {
-  font-family: "Atkinson Hyperlegible", sans-serif;
-  text-align: center;
-  color: black;
-}
-
-body {
-  background: linear-gradient(to right, #000080, #800080, #000080);
-  background-size: 400% 400%;
-
-  -webkit-animation: gradient 60s ease infinite;
-  -moz-animation: gradient 60s ease infinite;
-  animation: gradient 60s ease infinite;
-}
-
-h3 {
-  font-size: 1.333rem;
   margin-bottom: 1rem;
 }
 
@@ -204,6 +187,18 @@ h3 {
   margin-bottom: 0;
 }
 
+.pfp {
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(0, 0, 0, .1);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.project .img {
+  border-radius: 50%;
+}
+
 .button button, .status {
   box-shadow: black 5px 5px 0px;
   background-color: white;
@@ -232,7 +227,9 @@ button {
   text-decoration: none;
 }
 
-.button button:hover, .status:hover, .link:hover {
+.button button:hover,
+.status:hover,
+.link:hover {
   filter: brightness(0.8);
 }
 
@@ -270,10 +267,7 @@ button {
 }
 
 .status {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 5px;
 }
 
 .statuses {

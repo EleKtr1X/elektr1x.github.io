@@ -1,81 +1,67 @@
-let h3, p, img, ic;
 const konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 
+let saved = {};
 let keys = [];
 let eggActive = false;
 
 window.addEventListener('load', () => {
-  h3 = Array.from(document.getElementsByTagName('h3')).map(x => x.outerHTML);
-  p = Array.from(document.getElementsByTagName('p')).map(x => x.outerHTML);
-  img = Array.from(document.getElementsByTagName('img')).map(x => x.outerHTML);
-  ic = Array.from(document.getElementsByTagName('i')).map(x => x.outerHTML);
+  saved = {
+    h3:  [...document.querySelectorAll('h3')].map(x => x.outerHTML),
+    p:   [...document.querySelectorAll('p')].map(x => x.outerHTML),
+    '.icons i': [...document.querySelectorAll('.icons i')].map(x => x.outerHTML),
+    'img:not(button img)': [...document.querySelectorAll('img')].map(x => x.outerHTML),
+    'button:not(#menu-icon)': [...document.querySelectorAll('button:not(#menu-icon)')].map(x => x.outerHTML),
+  };
 });
 
 window.addEventListener('keydown', e => {
   keys.push(e.key);
   if (keys.join().includes(konami.join())) {
     keys = [];
-    const h3DOM = document.getElementsByTagName('h3');
-    const pDOM = document.getElementsByTagName('p');
-    const imgDOM = document.getElementsByTagName('img');
-    const iDOM = document.getElementsByTagName('i');
-    const buttonDOM = document.getElementsByTagName('button');
 
     if (eggActive == false) {
       document.body.style.background = getComputedStyle(document.body).background.replace(/linear-gradient\(.+\)/, 'linear-gradient(to right, rgb(34, 215, 29), rgb(253, 46, 246), rgb(155, 83, 0))');
-      document.getElementsByClassName('big-text')[0].textContent = 'Unpleasant Gradient';
-  
-      for (const i of h3DOM) { i.textContent = 'Unpleasant Gradient'; }
-      for (const i of pDOM) { i.textContent = 'This unpleasant gradient shows up in your website'; }
-      for (const i of buttonDOM) { i.textContent.replace(/<i .+>?(.+)<\/i>?/, 'It\'s here'); }
-      for (const i of imgDOM) { i.src = 'images/upg.png'; }
-      for (const i of iDOM) { i.outerHTML = '<i><img src="images/upg.png"/></i>' }
+      document.querySelector('.big-text').textContent = 'Unpleasant Gradient';
+
+      for (const i of document.querySelectorAll('h3'))
+        i.textContent = 'Unpleasant Gradient';
+
+      for (const i of document.querySelectorAll('p'))
+        i.textContent = 'This unpleasant gradient shows up in your website';
+
+      for (const i of document.querySelectorAll('img:not(button img)'))
+        i.src = '/images/upg.png';
+
+      for (const i of document.querySelectorAll('.icons i'))
+        i.outerHTML = '<i><img src="/images/upg.png"/></i>';
+
+      for (const i of document.querySelectorAll('button:not(#menu-icon)')) {
+        for (const icon of i.querySelectorAll('i')) {
+          icon.outerHTML = '<i><img src="/images/upg.png"/></i>';
+        }
+        i.childNodes[1].textContent = " It's here ";
+      }
 
       eggActive = true;
     } else {
       document.body.style.background = getComputedStyle(document.body).background.replace(/linear-gradient\(.+\)/, 'linear-gradient(to right, rgb(0, 0, 128), rgb(128, 0, 128), rgb(0, 0, 128))');
-      document.getElementsByClassName('big-text')[0].textContent = 'EleKtr1X';
+      document.querySelector('.big-text').textContent = 'EleKtr1X';
 
-      for (const i in h3DOM) {
-        h3DOM[i].outerHTML = h3[i];
-      }
+      for (let [k, v] of Object.entries(saved)) {
+        console.log(k);
+        [...document.querySelectorAll(k)].forEach((x, i) => {
+          console.log(k, v);
+          x.outerHTML = v[i];
+        })
+      };
 
-      for (const i in pDOM) {
-        pDOM[i].outerHTML = p[i];
-      }
-      
-      for (const i in iDOM) {
-        iDOM[i].outerHTML = ic[i];
-      }
-
-      for (const i in imgDOM) {
-        imgDOM[i].outerHTML = img[i];
-      }
       eggActive = false;
     }
   }
 }, true);
 
-function sizeCheck() {
-  console.log('called')
-  if (window.innerWidth <= 900) {
-    const projs = document.getElementsByClassName('projects');
-    for (const i of projs) {
-      i.classList.remove('projects');
-      i.classList.add('projects-small', 'xp');
-    }
-  } else {
-    const projs = document.getElementsByClassName('xp');
-    for (const i of projs) {
-      i.classList.remove('xp');
-      i.classList.remove('projects-small');
-      i.classList.add('projects');
-    }
-  }
-}
 
 function menu(icon, items, menuOpen) {
-  console.log('start');
   if (menuOpen) {
     icon.style.position = 'relative';
     icon.style.top = '';
@@ -90,13 +76,10 @@ function menu(icon, items, menuOpen) {
     icon.className = 'ti ti-x';
     items.style.display = 'flex';
   }
-  console.log('end');
   return !menuOpen;
 }
 
 window.addEventListener('DOMContentLoaded', async _ => {
-  sizeCheck();
-
   let button = document.getElementById('menu-icon');
   let items = document.getElementById('menu-items');
   let icon = button.childNodes[1];
@@ -144,5 +127,3 @@ window.addEventListener('DOMContentLoaded', async _ => {
     </div>`;
   }
 });
-
-window.addEventListener('resize', _ => sizeCheck());
