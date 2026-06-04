@@ -63,16 +63,10 @@ window.addEventListener('keydown', e => {
 
 function menu(icon, items, menuOpen) {
   if (menuOpen) {
-    icon.style.position = 'relative';
-    icon.style.top = '';
-    icon.style.right = '';
     icon.className = 'ti ti-menu-2';
     items.style.display = 'none';
     icon
   } else {
-    icon.style.position = 'absolute';
-    icon.style.top = '10px';
-    icon.style.right = '10px';
     icon.className = 'ti ti-x';
     items.style.display = 'flex';
   }
@@ -84,6 +78,9 @@ window.addEventListener('DOMContentLoaded', async _ => {
   let items = document.getElementById('menu-items');
   let icon = button.childNodes[1];
   let menuOpen = false;
+  icon.className = 'ti ti-menu-2';
+  items.style.display = 'none';
+
 
   button.addEventListener('click', () => {
     menuOpen = menu(icon, items, menuOpen);
