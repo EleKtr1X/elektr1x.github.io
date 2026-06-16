@@ -89,38 +89,4 @@ window.addEventListener('DOMContentLoaded', async _ => {
   button.addEventListener('touchcancel', () => {
     menuOpen = menu(icon, items, menuOpen);
   });
-
-  let vscodeStatus = document.getElementById('status-vscode');
-  let spotifyStatus = document.getElementById('status-spotify');
-  if (document.getElementsByClassName('statuses')[0]) {
-    const res = await fetch('https://api.statusbadges.me/presence/398967501662322701');
-    const data = await res.json();
-
-    const vscode = data.activities.filter(x => x.name == 'Visual Studio Code')[0];
-    vscodeStatus.innerHTML = vscode ? vscode.details : 'Nothing right now';
-
-    const spotify = data.activities.filter(x => x.name == 'Spotify')[0];
-    spotifyStatus.parentElement.parentElement.outerHTML = spotify ?
-    `
-    <div class="button">
-    <a target="_blank" href="https://open.spotify.com/track/${spotify.sync_id}" style="text-decoration: none">
-    <button>
-    <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
-      <span id="status-spotify">
-        "${spotify.details}" by ${spotify.state.replaceAll(/(\w); /g, '$1, ')}
-      </span>
-      <i class="ti ti-external-link"></i>
-      </button>
-      </a>
-    </div>
-    ` : `
-    <div class="button">
-    <button>
-    <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
-    <span id="status-spotify">
-      Nothing right now
-    </span>
-    </button>
-    </div>`;
-  }
 });

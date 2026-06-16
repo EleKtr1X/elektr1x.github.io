@@ -36,6 +36,7 @@ Made by EleKtr1X :)
     <script src="https://kit.fontawesome.com/dd456b3c10.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.36.1/dist/tabler-icons.min.css"/>
     <script src="/script.js"></script>
+    <script src="./script.js"></script>
   </head>
   <body>
     <div class="bg"></div>
@@ -78,10 +79,13 @@ Made by EleKtr1X :)
                 </button>
               </div>
               <div class="button">
-                <button>
-                  <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
-                  <span id="status-spotify">Loading...</span>
-                </button>
+                <a target="_blank" style="text-decoration: none" id="spotify-link">
+                  <button>
+                    <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
+                    <span id="status-spotify">Loading...</span>
+                    <i class="ti ti-external-link" style="display: none" id="spotify-link-icon"></i>
+                  </button>
+                </a>
               </div>
             </div>
           </p>
