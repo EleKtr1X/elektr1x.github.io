@@ -21,27 +21,5 @@ window.addEventListener('DOMContentLoaded', async _ => {
       spotifyLink.href = `https://open.spotify.com/track/${spotify.sync_id}`;
       spotifyLinkIcon.style.display = 'inline-block';
     }
-
-    // spotifyStatus.parentElement.parentElement.outerHTML = spotify ?
-    // `
-    // <div class="button">
-    // <a target="_blank" href="https://open.spotify.com/track/${spotify.sync_id}" style="text-decoration: none">
-    // <button>
-    // <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
-    //   <span id="status-spotify">
-    //     "${spotify.details}" by ${spotify.state.replaceAll(/(\w); /g, '$1, ')}
-    //   </span>
-    //   </button>
-    //   </a>
-    // </div>
-    // ` : `
-    // <div class="button">
-    // <button>
-    // <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
-    // <span id="status-spotify">
-    //   Nothing right now
-    // </span>
-    // </button>
-    // </div>`;
   }
 });
