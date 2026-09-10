@@ -59,34 +59,3 @@ window.addEventListener('keydown', e => {
     }
   }
 }, true);
-
-
-function menu(icon, items, menuOpen) {
-  if (menuOpen) {
-    icon.className = 'ti ti-menu-2';
-    items.style.display = 'none';
-    icon
-  } else {
-    icon.className = 'ti ti-x';
-    items.style.display = 'flex';
-  }
-  return !menuOpen;
-}
-
-window.addEventListener('DOMContentLoaded', async _ => {
-  let button = document.getElementById('menu-icon');
-  let items = document.getElementById('menu-items');
-  let icon = button.childNodes[1];
-  let menuOpen = false;
-  icon.className = 'ti ti-menu-2';
-  items.style.display = 'none';
-
-
-  button.addEventListener('click', () => {
-    menuOpen = menu(icon, items, menuOpen);
-  });
-
-  button.addEventListener('touchcancel', () => {
-    menuOpen = menu(icon, items, menuOpen);
-  });
-});

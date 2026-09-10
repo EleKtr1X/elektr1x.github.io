@@ -1,0 +1,46 @@
+.status {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem !important;
+  padding-top: 1rem !important;
+  padding-right: 2rem !important;
+  padding-bottom: 1rem !important;
+  max-width: 800px;
+}
+
+.status-details {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 0.33rem;
+}
+
+.status-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.33rem;
+}
+
+#vscode-details, #spotify-track-name, #spotify-artist {
+  text-align: left;
+}
+
+.status-img {
+  height: 100px;
+  border-radius: 10px;
+}
+
+.spotify-time {
+  display: flex;
+  flex-direction: row;
+  gap: 0.33rem;
+}
+
+.statuses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

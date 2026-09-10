@@ -24,6 +24,7 @@ Made by EleKtr1X :)
   <head>
     <title>EleKtr1X's Mediocre Website</title>
     <link href="/style.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico?">
 
     <!-- opengraph stuff -->
@@ -40,20 +41,11 @@ Made by EleKtr1X :)
   </head>
   <body>
     <div class="bg"></div>
-    <div class="menu">
-      <button id="menu-icon">
-        <i class="ti ti-menu-2"></i>
-      </button>
-      <div id="menu-items">
-        <a href="/" class="button">
-          <button><i class="ti ti-home"></i> Home</i></button>
-        </a>
-        <a href="/contact" class="button" >
-          <button><i class="ti ti-world"></i> Contact</i></button>
-        </a>
-      </div>
-    </div>
     <div class="parent">
+      <div class="navbar mb">
+        <a href="/" class="link">Home</button></a>
+        <a href="/contact" class="link">Contact</a>
+      </div>
       <div class="box mb">
         <div class="pfp-container">
           <img src="/images/profile.png" class="pfp"/>
@@ -69,22 +61,41 @@ Made by EleKtr1X :)
       </div>
       <div class="box mb">
         <div class="bio">
-          <p>Besides the social links right above, you might be wondering what I'm up to right now. Here's the important stuff, ripped from my Discord status:</p>
+          <p>Besides the social links right above, you might be wondering what I'm up to right now. Here's the important stuff, ripped from my Discord status using <a class="link" href="https://statusbadges.me">StatusBadges</a>:</p>
           <p>
             <div class="statuses">
               <div class="button">
-                <button>
-                  <i class="ti ti-brand-vscode" style="color: #0098ff"></i>
-                  <span id="status-vscode">Loading...</span>
-                </button>
+                <div class="status">
+                  <img class="status-img" id="vscode-img" src="/images/profile.png" alt="N/A"/>
+                  <div class="status-details">
+                    <div class="status-title">
+                    <i class="ti ti-brand-vscode" style="color: #0098ff"></i>
+                      <span id="vscode-details">
+                        Loading...</span>
+                    </div>
+                    <span id="vscode-workspace">Loading...</span>
+                  </div>
+                </div>
               </div>
               <div class="button">
                 <a target="_blank" style="text-decoration: none" id="spotify-link">
-                  <button>
-                    <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
-                    <span id="status-spotify">Loading...</span>
-                    <i class="ti ti-external-link" style="display: none" id="spotify-link-icon"></i>
-                  </button>
+                  <div class="status">
+                    <img class="status-img" id="spotify-img" src="/images/profile.png" alt="N/A"/>
+                    <div class="status-details">
+                      <div class="status-title">
+                        <i class="ti ti-brand-spotify" style="color: #1ed760"></i>
+                        <span id="spotify-track-name">
+                          Loading...</span>
+                        <i class="ti ti-external-link"></i>
+                      </div>
+                      <span id="spotify-artist">Loading...</span>
+                      <div class="spotify-time">
+                        <span id="spotify-time-progress">-:--</span>
+                        <span>/</span>
+                        <span id="spotify-time-end">-:--</span>
+                      </div>
+                    </div>
+                  </div>
                 </a>
               </div>
             </div>
