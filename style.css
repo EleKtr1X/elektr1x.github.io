@@ -196,9 +196,12 @@ h3 {
 .pfp {
   width: 8rem;
   height: 8rem;
-  background-color: rgba(0, 0, 0, .1);
-  padding: 1rem;
+  border: 5px solid black;
+  box-shadow: black 5px 5px 0px;
+  background-color: white;
+  padding: 0.5rem;
   border-radius: 50%;
+
 }
 
 .project .img {
