@@ -20,6 +20,7 @@ window.addEventListener('DOMContentLoaded', async _ => {
     if (vscode) {
       vscodeImg.src = `https://cdn.discordapp.com/app-assets/${vscode.application_id}/${vscode.assets.large_image}.png`;
       vscodeImg.alt = vscode.assets.large_text;
+      vscodeImg.title = vscode.assets.large_text;
     }
 
     const spotify = data.activities.filter(x => x.name == 'Spotify')[0];
@@ -30,6 +31,7 @@ window.addEventListener('DOMContentLoaded', async _ => {
       spotifyLink.href = `https://open.spotify.com/track/${spotify.sync_id}`;
       spotifyImg.src = `https://i.scdn.co/image/${spotify.assets.large_image.split(':')[1]}`;
       spotifyImg.alt = spotify.assets.large_text;
+      spotifyImg.title = spotify.assets.large_text;
 
       let progress = Math.floor(Date.now() - spotify.timestamps.start);
       let end = Math.floor(spotify.timestamps.end - spotify.timestamps.start);
