@@ -1,11 +1,16 @@
 .status {
   display: flex;
   flex-direction: row;
+  justify-content: left;
   gap: 1rem !important;
   padding-top: 1rem !important;
-  padding-right: 2rem !important;
+  padding-right: 1rem !important;
   padding-bottom: 1rem !important;
-  max-width: 800px;
+  width: 100%;
+}
+
+.status-link {
+  width: 100%;
 }
 
 .status-details {
@@ -16,7 +21,7 @@
 }
 
 .status-title {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: bold;
   display: flex;
   flex-direction: row;
@@ -24,12 +29,16 @@
   gap: 0.33rem;
 }
 
-#vscode-details, #spotify-track-name, #spotify-artist {
+.status h4, .status span {
   text-align: left;
 }
 
+.status h4 {
+  margin: 0;
+}
+
 .status-img {
-  height: 100px;
+  height: 75px;
   border-radius: 10px;
 }
 
@@ -43,4 +52,19 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  max-width: 500px;
+}
+
+@media screen and (min-width: 900px) {
+  .status-img {
+    height: 100px;
+  }
+
+  .status-title {
+    font-size: 1.6rem;
+  }
+
+  .status {
+    padding-right: 2rem !important;
+  }
 }

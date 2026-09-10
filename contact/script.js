@@ -16,14 +16,13 @@ window.addEventListener('DOMContentLoaded', async _ => {
     const vscode = data.activities.filter(x => x.name == 'Visual Studio Code')[0];
     vscodeDetails.innerText = vscode ? vscode.details : 'Nothing right now';
     vscodeWorkspace.innerText = vscode && vscode.state ? vscode.state : 'N/A';
+
     if (vscode) {
       vscodeImg.src = `https://cdn.discordapp.com/app-assets/${vscode.application_id}/${vscode.assets.large_image}.png`;
       vscodeImg.alt = vscode.assets.large_text;
     }
 
     const spotify = data.activities.filter(x => x.name == 'Spotify')[0];
-
-    console.log(vscode);
     spotifyTrack.innerText = spotify ? spotify.details : 'Nothing right now';
     spotifyArtist.innerText = spotify ? spotify.state.replaceAll(/(\w); /g, '$1, ') : 'N/A';
 
@@ -41,11 +40,11 @@ window.addEventListener('DOMContentLoaded', async _ => {
         // you might think i could just add 1000ms to `progress`, but if you're tabbed out the interval
         // straight up just doesn't run
         progress = Math.floor(Date.now() - spotify.timestamps.start);
-        spotifyTimeProgress.innerText = msToDuration(progress);
-
-        if (progress >= end - 1) {
+        if (Math.floor(progress / 1000) >= Math.floor((end - 1) / 1000)) {
           clearInterval(interval);
         }
+        spotifyTimeProgress.innerText = msToDuration(progress);
+
       }, 1000);
     }
   }

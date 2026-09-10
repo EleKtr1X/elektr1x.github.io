@@ -43,11 +43,13 @@ body {
   .box {
     padding: 3rem 5rem;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .box, .projects, .projects-small {
-    width: 900px;
+  .big-text {
+    font-size: 3rem !important;
+  }
+
+  .navbar {
+    font-size: 1.2rem;
   }
 }
 
@@ -159,7 +161,7 @@ h3 {
 }
 
 .big-text {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -287,11 +289,19 @@ button {
   padding: 1rem;
   padding-right: 1.5rem;
   gap: 1rem;
-  font-size: 1.2rem;
+}
+
+.box, .projects, .projects-small, .navbar {
   width: 100%;
   max-width: 900px;
 }
 
 .link:hover {
   color: #555;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
