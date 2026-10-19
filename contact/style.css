@@ -44,11 +44,11 @@
   gap: 0.33rem;
 }
 
-.status h4, .status span {
+.status h5, .status span {
   text-align: left;
 }
 
-.status h4 {
+.status h5 {
   margin: 0;
 }
 
@@ -63,11 +63,15 @@
   gap: 0.33rem;
 }
 
+.spotify-time>* {
+  font-family: 'Atkinson Hyperlegible Mono', monospace !important;
+}
+
 .statuses {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-width: 500px;
+  max-width: 550px;
 }
 
 @media screen and (min-width: 900px) {
@@ -82,4 +86,10 @@
   .status {
     padding-right: 2rem !important;
   }
+}
+
+.status-icon {
+  position: relative;
+  top: 2px;
+  margin-right: -2px;
 }

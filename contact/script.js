@@ -2,10 +2,10 @@ window.addEventListener('DOMContentLoaded', async _ => {
   let vscodeDetails = document.getElementById('vscode-details');
   let vscodeWorkspace = document.getElementById('vscode-workspace');
   let vscodeImg = document.getElementById('vscode-img');
+
   let spotifyTrack = document.getElementById('spotify-track-name');
   let spotifyImg = document.getElementById('spotify-img');
   let spotifyArtist = document.getElementById('spotify-artist');
-  let spotifyLink = document.getElementById('spotify-link');
   let spotifyTimeProgress = document.getElementById('spotify-time-progress');
   let spotifyTimeEnd = document.getElementById('spotify-time-end');
 
@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', async _ => {
     spotifyArtist.innerText = spotify ? spotify.state.replaceAll(/(\w); /g, '$1, ') : 'N/A';
 
     if (spotify) {
-      spotifyLink.href = `https://open.spotify.com/track/${spotify.sync_id}`;
+      spotifyTrack.href = `https://open.spotify.com/track/${spotify.sync_id}`;
       spotifyImg.src = `https://i.scdn.co/image/${spotify.assets.large_image.split(':')[1]}`;
       spotifyImg.alt = spotify.assets.large_text;
       spotifyImg.title = spotify.assets.large_text;
@@ -46,7 +46,6 @@ window.addEventListener('DOMContentLoaded', async _ => {
           clearInterval(interval);
         }
         spotifyTimeProgress.innerText = msToDuration(progress);
-
       }, 1000);
     }
   }
